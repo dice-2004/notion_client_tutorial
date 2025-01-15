@@ -1,0 +1,8 @@
+services:
+  notion:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/user/src/app
+    tty: true
