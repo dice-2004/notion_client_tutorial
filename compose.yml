@@ -1,8 +1,10 @@
 services:
   notion:
     build:
-      context: ./app
+      context: ./
       dockerfile: Dockerfile
     volumes:
-      - ./app:/user/src/app
+      - ./:/user/src/app
+    env_file:
+      - ./.env
     tty: true
